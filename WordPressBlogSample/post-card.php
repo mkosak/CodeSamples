@@ -4,7 +4,7 @@
   $argument_two = isset($args) && isset($args['argument-two']) ? $args['argument-two'] : null;
 ?>
 <article class="card" data-href="<?php the_permalink(); ?>">	
-	<div class="card__in">		
+  <div class="card__in">		
     <header class="card__header">
       <div class="ia-t-misc">
         <?php echo get_the_date('M d, Y'); ?>
@@ -23,6 +23,6 @@
       <span class="ia-a11y"><?php _e('Read more', 'dev_theme'); ?></span>
       <span class="ia-control ia-control--white-arrow"></span>
     </a>
-	</div>
+  </div>
   <div class="card__bg"></div>
 </article>
