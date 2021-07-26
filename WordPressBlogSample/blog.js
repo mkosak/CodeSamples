@@ -34,7 +34,11 @@
         // re-render tags based on the global array
         tags.forEach(function(item) {
           if (item.taxonomy === 'search') return;
-          $(tagsSelector).append(`<a href="#" class="ia-tag ia-tag--selected" data-remove-term data-taxonomy="${item.taxonomy}" data-term="${item.term}">${item.term}</a>`);
+          $(tagsSelector).append(`<a href="#" 
+                                     class="ia-tag ia-tag--selected" 
+                                     data-remove-term 
+                                     data-taxonomy="${item.taxonomy}" 
+                                     data-term="${item.term}">${item.term}</a>`);
         });
         
         // extend the container height if there are more than 'showTagsLimit' selected
