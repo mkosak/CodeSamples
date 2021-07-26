@@ -1,9 +1,9 @@
 <?php
   /* Load Blog Posts */
   add_action('wp_ajax_load_blog_posts', 'wp_ajax_load_blog_posts');
-	add_action('wp_ajax_nopriv_load_blog_posts', 'wp_ajax_load_blog_posts');
+  add_action('wp_ajax_nopriv_load_blog_posts', 'wp_ajax_load_blog_posts');
 
-	function wp_ajax_load_blog_posts() {    
+  function wp_ajax_load_blog_posts() {    
     $search = (isset($_POST['search'])) ? $_POST['search'] : '';
     $topics = (isset($_POST['category'])) ? $_POST['category'] : '';
     $page = (isset($_POST['page'])) ? $_POST['page'] : 1;
@@ -32,8 +32,8 @@
     }
 
     wp_reset_query();
-		wp_die();
-	}
+    wp_die();
+  }
 
   /* Helper function for the post query request */
   function blog_posts_query($search, $page, $topics, $posts_per_page, $authored, $tag) {
@@ -85,4 +85,4 @@
     $feed_query = new WP_Query($feed_args);
 
     return $feed_query;
-	}
+}
